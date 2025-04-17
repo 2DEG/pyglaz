@@ -1,0 +1,8 @@
+<!DOCTYPE GlazScript>
+<config>
+<camera serial="SYBP033010074" number="1" master="1"/>
+<preprocessor camera="1" type="subtract_background"/>
+<calculation name="Camera 1" keepscans="1">
+<measurement camera="1"/>
+</calculation>
+</config>

@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyglaz"
+version = "0.1.0"
+description = "Python bindings for the Glaz spectroscopic library"
+readme = "README.md"
+requires-python = ">=3.6"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Nick", email = "nick@example.com"}
+]
+maintainers = [
+    {name = "Nick", email = "nick@example.com"}
+]
+keywords = ["spectroscopy", "hardware", "science", "bindings"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "numpy>=1.16.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/pyglaz"
+Documentation = "https://github.com/yourusername/pyglaz#documentation"
+"Bug Tracker" = "https://github.com/yourusername/pyglaz/issues"
+"Source Code" = "https://github.com/yourusername/pyglaz"
+
+[project.optional-dependencies]
+examples = ["matplotlib>=3.1.0"]
+dev = [
+    "pytest>=6.0",
+    "black>=22.1.0",
+    "mypy>=0.910",
+    "isort>=5.10.1",
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py36", "py37", "py38", "py39"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.6"
+warn_return_any = true
+warn_unused_configs = true

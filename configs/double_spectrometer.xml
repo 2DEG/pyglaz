@@ -1,0 +1,5 @@
+<!DOCTYPE GlazScript>
+<config>
+<camera serial="SYBP033010074" number="1" master="1"/>
+<camera serial="SYBP033010075" number="2" master="0"/>
+</config>
