@@ -324,7 +324,6 @@ class GlazLib:
             RuntimeError: If setting the trigger mode fails
         """
         status = lib._lib.setTriggerMode(mode)
-        print("Status:", status)
         if status != lib.ERROR_NONE:
             error_msg = self.get_last_error_message()
             raise RuntimeError(f"Failed to set trigger mode: {error_msg}")
@@ -475,7 +474,6 @@ class GlazLib:
             RuntimeError: If capturing the background fails
         """
         status = lib._lib.captureBackground(count)
-        print("Status:", status)
         if status != lib.ERROR_NONE:
             error_msg = self.get_last_error_message()
             raise RuntimeError(f"Failed to capture background: {error_msg}")
@@ -488,7 +486,6 @@ class GlazLib:
             RuntimeError: If running the measurement fails
         """
         status = lib._lib.runMeasurement()
-        print("Status:", status)
         if status != lib.ERROR_NONE:
             error_msg = self.get_last_error_message()
             raise RuntimeError(f"Failed to run measurement: {error_msg}")
